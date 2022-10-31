@@ -29,6 +29,7 @@ public class HomeController {
         resultList.add("DDD");
         resultList.add("EEE");
         resultList.add("FFF");
+        resultList.add("git commit test");
 
         mav.addObject("resultList",resultList);
         mav.setViewName("content/home");
