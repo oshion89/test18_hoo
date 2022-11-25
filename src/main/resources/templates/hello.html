@@ -7,8 +7,10 @@
     <title>Hello view</title>
 </head>
 <body>
+
 <main layout:fragment="content">
-    <h1 th:text="${hello}"> CHA CHA</h1>
+    <h1 th:text="${hello}"> Hoo Hoo</h1>
+    <button type="button" th:onclick="|window.location.href='/do-stuff'|">Hello</button>
 </main>
 </body>
 </html>

@@ -3,6 +3,8 @@ package com.hoo.test18_hoo.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HelloViewController {
@@ -12,4 +14,15 @@ public class HelloViewController {
         model.addAttribute("hello", "HelloWolrd");
         return "hello";
     }
+
+
+    @RequestMapping(value="/do-stuff")
+    public String doStuffMethod() {
+        System.out.println("Success");
+        return "hello";
+    }
+
+
+
+
 }
