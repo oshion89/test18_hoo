@@ -15,7 +15,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/")
-public class HomeController {
+public class HelloController {
 
 //    @GetMapping("/home")
 //    public ModelAndView goHome(HttpServletRequest request) {

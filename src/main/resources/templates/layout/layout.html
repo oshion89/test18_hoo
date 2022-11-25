@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - CHACHA WEB</title>
+    <th:block th:include="common/include-link"></th:block>
 </head>
-<body>
-$END$
+<body class="sb-nav-fixed">
+<nav th:replace="fragment/header"></nav>
+<div id="layoutSidenav">
+    <div th:replace="fragment/sidebar  :: sidebar"></div>
+    <div id="layoutSidenav_content">
+        <main layout:fragment="content"></main>
+        <footer th:replace="fragment/footer :: footer"></footer>
+    </div>
+</div>
+<th:block th:include="common/include-script"></th:block>
 </body>
 </html>
