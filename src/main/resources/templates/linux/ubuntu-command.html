@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/layout" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>자주 사용하는 우분투 명령어</title>
+</head>
+<body>
+
+<main layout:fragment="content">
+
+    <h1> 자주 사용하는 우분투 명령어 </h1>
+
+    <p>
+        ● crontab 실행로그
+        <br>sudo tail -f /var/log/syslog
+        <br>
+        <br>● crontab 등록
+        <br>sudo vi /etc/crontab
+        <br>*/5 * * * * root sudo /home/tomcat/tomcat-8.5.73/bin/checkstart.sh
+        <br>
+        <br>● 톰캣 프로세스 실행여부
+        <br>ps -ef | grep tomcat
+        <br>
+        <br>● 전체적인 CPU사용률, 메모리 사용률, 점유율 확인 가능
+        <br># top
+        <br>
+        <br>kill -9 {pid}    프로세스 강제종료
+        <br>
+        <br>● 톰캣 재시작 쉘스크립트
+        <br>https://fruitdev.tistory.com/203
+        <br>
+        <br>● 시간설정
+        <br>타임존 확인 timedatectl
+        <br>타임존리스트 확인 timedatectl list-timezones | grep Seoul
+        <br>타임존 설정 sudo timedatectl set-timezone Asia/Seoul
+        <br>시간확인 date
+        <br>
+        <br>● 열려있는 모든 포트 표시
+        <br>netstat -nap
+        <br>netstat -tnlp
+        <br>
+        <br>● 확인하려는 포트번호 상태확인
+        <br>netstat -nap | grep 포트번호
+        <br>
+        <br>● 윈도우 열려있는 포트 확인
+        <br>netstat -ano | findstr \[::]\:
+        <br>
+        <br>● 윈도우 프로세스 킬
+        <br>taskkill /f /pid 5880
+        <br>
+        <br>● 자바힙메모리 확인
+        <br>java -XX:+PrintFlagsFinal -version 2>&1 | grep -i -E 'heapsize|metaspacesize|version'
+        <br>
+        <br>● 메모리관련 톰캣처리
+        <br>http://www.kkujunhee.net/bbs/board.php?bo_table=os&wr_id=19
+        <br>
+        <br>● 메모리확인방법들
+        <br>https://m.blog.naver.com/jayeonsaram/220647978281
+        <br>
+        <br>● 특정PID 메모리 확인
+        <br>프로세스의 PID를 알고 있다면
+        <br>> cat /proc/"PID"/status 입력 시
+        <br>VmSize : 전체 할당된 가상 메모리 크기
+        <br>VmRSS : 실제 물리 메모리가 할당된 크기
+        <br>VmLck : Swapout될 수 없는 메모리 크기
+        <br>VmData : Heap 영역
+        <br>VmStk : Stack 영역
+        <br>VmExe :  실행코드 영역 (전역변수/실행코드)
+        <br>VmLib : 동적 연결된 라이브러리 영역
+        <br>
+        <br>● 특정 웹사이트의 HTTP 리턴 코드 보기
+        <br>curl -L -k -s -o /dev/null -w "%{http_code}\n" www.naver.com
+        <br>
+        <br>● java jar 파일 백그라운드에서 실행 시키기
+        <br>nohup java -jar 파일이름.jar &
+        <br>nohup java -jar /home/ubuntu/web/test.jar &
+        <br>
+        <br>● 환경변수 세팅
+        <br>sudo vi ~/.bashrc
+        <br>source ~/.bashrc   < 적용
+        <br>
+        <br>● 외부아이피 확인
+        <br>curl ifconfig.me
+        <br>
+        <br>● tar 압축풀기
+        <br>tar -xvf test.tar
+        <br>
+        <br>● tar.gz 압축풀기
+        <br>tar -xzvf test.tar.gz
+        <br>
+        <br>● gz 압축풀기
+        <br>sudo gzip -d log.gz
+        <br>
+        <br>● 파일 이름 검색
+        <br>find . -name "STR*"
+        <br>
+        <br>● 포트 열려있는지 확인
+        <br>telnet
+        <br>
+        <br>● 현재 부터 하위 모두를 검색하되, 갯수 세기는 -c 추가
+        <br>grep -ri '내용' ./*
+        <br>grep -ri '82바4647' ./log_20221129.*.log
+        <br>
+        <br>● top 보는법
+        <br>https://sabarada.tistory.com/146
+        <br>
+        <br>● kswapd0 프로세스 관련 memory -> 하드웨어 가상 메모리로 가는것 기준 ???설정???
+        <br>/etc/sysctl.conf
+        <br>
+        <br>vm.swappiness=60
+        <br>vm.vfs_cache_pressure=30
+        <br>vm.dirty_background_ratio=10
+        <br>vm.dirty_ratio=30
+        <br>
+        <br>● 윈도우 환경변수 바로 적용
+        <br>taskkill /f /im explorer.exe
+        <br>다시 exeplorer.exe
+        <br>
+        <br>● 윈도우 공인 ip 보는법
+        <br>nslookup myip.opendns.com resolver1.opendns.com
+    </p>
+
+</main>
+</body>
+</html>

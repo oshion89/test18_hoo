@@ -15,3 +15,8 @@ spring:
 
 
 
+config:
+  jwt:
+    secret-key: hootesttttttttttthootesttttttttttt
+    payload-key: test # payload에 저장될 유저정보 키 값
+    token-expire: 60  # 60초

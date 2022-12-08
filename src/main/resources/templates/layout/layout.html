@@ -2,23 +2,23 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Dashboard - CHACHA WEB</title>
-    <th:block th:include="common/include-link"></th:block>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>HOO TEST</title>
+    <th:block th:include="/common/include-link"></th:block>
 </head>
 <body class="sb-nav-fixed">
-<nav th:replace="fragment/header"></nav>
-<div id="layoutSidenav">
-    <div th:replace="fragment/sidebar  :: sidebar"></div>
-    <div id="layoutSidenav_content">
-        <main layout:fragment="content"></main>
-        <footer th:replace="fragment/footer :: footer"></footer>
+    <nav th:replace="/fragment/header"></nav>
+    <div id="layoutSidenav">
+        <div th:replace="/fragment/sidebar  :: sidebar"></div>
+        <div id="layoutSidenav_content">
+            <main class="container-fluid px-4 mt-4" layout:fragment="content"></main>
+            <footer th:replace="/fragment/footer :: footer"></footer>
+        </div>
     </div>
-</div>
-<th:block th:include="common/include-script"></th:block>
+    <th:block th:include="/common/include-script"></th:block>
 </body>
 </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate ="layout/layout">
+<main layout:fragment="content">
+    <h1>암복호화</h1>
+
+    <textarea id="textarea1" class="textarea-basic" placeholder="target text"></textarea>
+    <br>
+    <button onclick="sha_224Encoding()">SHA-224</button>
+    <button onclick="sha_256Encoding()">SHA-256</button>
+    <button onclick="sha_384Encoding()">SHA-384</button>
+    <button onclick="sha_512Encoding()">SHA-512</button>
+    <button onclick="sha3_224Encoding()">SHA3-224</button>
+    <button onclick="sha3_256Encoding()">SHA3-256</button>
+    <button onclick="sha3_384Encoding()">SHA3-384</button>
+    <button onclick="sha3_512Encoding()">SHA3-512</button>
+    <br>
+    </b><textarea id="textarea2"class="textarea-basic" placeholder="result"></textarea>
+
+    <script th:inline="javascript">
+
+        function sha_224Encoding() {
+
+            var textarea1 = document.getElementById("textarea1").value;
+            var type = "SHA-224";
+            ajaxSend(type, textarea1);
+
+        }
+
+        function sha_256Encoding() {
+
+            var textarea1 = document.getElementById("textarea1").value;
+            var type = "SHA-256";
+            ajaxSend(type, textarea1);
+
+        }
+
+        function sha_384Encoding() {
+
+            var textarea1 = document.getElementById("textarea1").value;
+            var type = "SHA-384";
+            ajaxSend(type, textarea1);
+
+        }
+
+        function sha_512Encoding() {
+
+            var textarea1 = document.getElementById("textarea1").value;
+            var type = "SHA-512";
+            ajaxSend(type, textarea1);
+
+        }
+
+        function sha3_224Encoding() {
+
+            var textarea1 = document.getElementById("textarea1").value;
+            var type = "SHA3-224";
+            ajaxSend(type, textarea1);
+
+        }
+
+        function sha3_256Encoding() {
+
+            var textarea1 = document.getElementById("textarea1").value;
+            var type = "SHA3-256";
+            ajaxSend(type, textarea1);
+
+        }
+
+        function sha3_384Encoding() {
+
+            var textarea1 = document.getElementById("textarea1").value;
+            var type = "SHA3-384";
+            ajaxSend(type, textarea1);
+
+        }
+
+        function sha3_512Encoding() {
+
+            var textarea1 = document.getElementById("textarea1").value;
+            var type = "SHA3-512";
+            ajaxSend(type, textarea1);
+
+        }
+
+        function ajaxSend(type, data) {
+
+            $.ajax({
+                url: "/java/sha256",
+                data: { type: type, text: data },
+                type: 'GET',
+                dataType: "text" // 서버에서 보내줄 데이터의 타입
+            }).done(function (data){
+                document.getElementById("textarea2").value = data;
+            }).fail(function(jqXHR) {
+                console.log(jqXHR);
+            })
+            .always(function() {
+                // console.log("요청, 응답 결과에 상관없이, 이건 항상 실행됩니다.");
+            });
+
+        }
+    </script>
+
+
+</main>
+</html>

@@ -11424,8 +11424,8 @@ body {
   z-index: 1039;
 }
 .sb-topnav .navbar-brand {
-  width: 225px;
-  margin: 0;
+  width: 165px;
+  margin-left: 1rem;
 }
 .sb-topnav.navbar-dark #sidebarToggle {
   color: rgba(255, 255, 255, 0.5);
@@ -11698,4 +11698,9 @@ body {
   width: 20px !important;
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
+}
+
+.textarea-basic {
+  width: 700px ;
+  height: 300px ;
 }

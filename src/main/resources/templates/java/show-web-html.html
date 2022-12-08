@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate ="layout/layout">
+<main layout:fragment="content">
+    <h1>Jsoup 을 이용한 사이트 HTML 보기</h1>
+
+    <textarea id="textarea1" style="width: 700px; height: 100px" placeholder="url"></textarea>
+    <br>
+    <button onclick="showWebHtml()">SHOW HTML</button>
+    <br>
+    </b><textarea id="textarea2" style="width: 1000px; height: 700px" placeholder="result"></textarea>
+
+    <script th:inline="javascript">
+
+        function showWebHtml() {
+
+            var textarea1 = document.getElementById("textarea1").value;
+            document.getElementById("textarea2").value = "";
+            ajaxSend(textarea1);
+
+        }
+
+        function ajaxSend(data) {
+
+            $.ajax({
+                url: "/java/apishowwebhtml",
+                data: { url: data },
+                type: 'GET',
+                dataType: "text" // 서버에서 보내줄 데이터의 타입
+            }).done(function (data){
+                document.getElementById("textarea2").value = data;
+            }).fail(function(jqXHR) {
+                console.log(jqXHR);
+            })
+            .always(function() {
+                // console.log("요청, 응답 결과에 상관없이, 이건 항상 실행됩니다.");
+            });
+
+        }
+    </script>
+
+
+</main>
+</html>

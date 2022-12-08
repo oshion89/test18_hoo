@@ -4,62 +4,79 @@
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
             <div class="nav">
+
                 <div class="sb-sidenav-menu-heading">A</div>
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" th:href="@{/}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Home
                 </a>
-                <div class="sb-sidenav-menu-heading">B</div>
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                    B-1
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="layout-static.html">String + vs append</a>
-                    </nav>
-                </div>
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                    B-2
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                            B-2-1
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="login.html">B-2-1-1</a>
-                                <a class="nav-link" href="register.html">B-2-1-2</a>
-                                <a class="nav-link" href="password.html">B-2-1-3</a>
-                            </nav>
-                        </div>
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                            B-2-2
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="401.html">B-2-2-1</a>
-                                <a class="nav-link" href="404.html">B-2-2-2</a>
-                                <a class="nav-link" href="500.html">B-2-2-3</a>
-                            </nav>
-                        </div>
-                    </nav>
-                </div>
-                <div class="sb-sidenav-menu-heading">C</div>
-                <a class="nav-link" href="charts.html">
-                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                    C-1
-                </a>
-                <a class="nav-link" href="tables.html">
-                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                    C-2
-                </a>
+
+                <div class="sb-sidenav-menu-heading">LINUX</div>
+                <a class="nav-link" th:href="@{/linux/ubuntucommand}">우분투 많이쓰는 명령어</a>
+
+
+                <div class="sb-sidenav-menu-heading">JAVA</div>
+                <a class="nav-link" th:href="@{/java/endecryption}">암복호화</a>
+                <a class="nav-link" th:href="@{/java/gettoken}">JWT토큰발행</a>
+                <a class="nav-link" th:href="@{/java/loadingspeed}">사이트속도측정</a>
+                <a class="nav-link" th:href="@{/java/showwebhtml}">사이트HTML보기</a>
+
+
+<!--                <div class="sb-sidenav-menu-heading">B</div>-->
+<!--                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">-->
+<!--                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>-->
+<!--                    B-1-->
+<!--                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>-->
+<!--                </a>-->
+<!--                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">-->
+<!--                    <nav class="sb-sidenav-menu-nested nav">-->
+<!--                        <a class="nav-link" href="layout-static.html">String + vs append</a>-->
+<!--                    </nav>-->
+<!--                </div>-->
+
+<!--                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">-->
+<!--                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>-->
+<!--                    B-2-->
+<!--                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>-->
+<!--                </a>-->
+
+<!--                <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">-->
+<!--                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">-->
+<!--                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">-->
+<!--                            B-2-1-->
+<!--                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>-->
+<!--                        </a>-->
+<!--                        <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">-->
+<!--                            <nav class="sb-sidenav-menu-nested nav">-->
+<!--                                <a class="nav-link" href="login.html">B-2-1-1</a>-->
+<!--                                <a class="nav-link" href="register.html">B-2-1-2</a>-->
+<!--                                <a class="nav-link" href="password.html">B-2-1-3</a>-->
+<!--                            </nav>-->
+<!--                        </div>-->
+<!--                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">-->
+<!--                            B-2-2-->
+<!--                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>-->
+<!--                        </a>-->
+<!--                        <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">-->
+<!--                            <nav class="sb-sidenav-menu-nested nav">-->
+<!--                                <a class="nav-link" href="401.html">B-2-2-1</a>-->
+<!--                                <a class="nav-link" href="404.html">B-2-2-2</a>-->
+<!--                                <a class="nav-link" href="500.html">B-2-2-3</a>-->
+<!--                            </nav>-->
+<!--                        </div>-->
+<!--                    </nav>-->
+<!--                </div>-->
+
+<!--                <div class="sb-sidenav-menu-heading">C</div>-->
+<!--                <a class="nav-link" href="charts.html">-->
+<!--                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>-->
+<!--                    C-1-->
+<!--                </a>-->
+<!--                <a class="nav-link" href="tables.html">-->
+<!--                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>-->
+<!--                    C-2-->
+<!--                </a>-->
+
             </div>
         </div>
 <!--        <div class="sb-sidenav-footer">-->

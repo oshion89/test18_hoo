@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate ="layout/layout">
+<main layout:fragment="content">
+    <h1>JWT 토큰 발행</h1>
+
+    <textarea id="textarea1" class="textarea-basic" placeholder="target text"></textarea>
+    <br>
+    <button onclick="getJWTToken()">GET TOKEN</button>
+    <button onclick="decodeJWTToken()">DECODE TOKEN</button>
+    <br>
+    </b><textarea id="textarea2"class="textarea-basic" placeholder="result"></textarea>
+
+    <script th:inline="javascript">
+
+        function getJWTToken() {
+
+            var textarea1 = document.getElementById("textarea1").value;
+            document.getElementById("textarea2").value = "";
+            ajaxSend(textarea1);
+
+        }
+
+        function decodeJWTToken() {
+
+            var textarea1 = document.getElementById("textarea1").value;
+            document.getElementById("textarea2").value = "";
+            ajaxSend2(textarea1);
+
+        }
+
+
+        function ajaxSend(data) {
+
+            $.ajax({
+                url: "/java/apigettoken",
+                data: { text: data },
+                type: 'GET',
+                dataType: "text" // 서버에서 보내줄 데이터의 타입
+            }).done(function (data){
+                document.getElementById("textarea2").value = data;
+            }).fail(function(jqXHR) {
+                console.log(jqXHR);
+            })
+            .always(function() {
+                // console.log("요청, 응답 결과에 상관없이, 이건 항상 실행됩니다.");
+            });
+
+        }
+
+        function ajaxSend2(data) {
+
+            $.ajax({
+                url: "/java/apidecodetoken",
+                data: { text: data },
+                type: 'GET',
+                dataType: "text" // 서버에서 보내줄 데이터의 타입
+            }).done(function (data){
+                document.getElementById("textarea2").value = data;
+            }).fail(function(jqXHR) {
+                console.log(jqXHR);
+            })
+                .always(function() {
+                    // console.log("요청, 응답 결과에 상관없이, 이건 항상 실행됩니다.");
+                });
+
+        }
+    </script>
+
+
+</main>
+</html>

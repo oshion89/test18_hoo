@@ -9,18 +9,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HelloViewController {
 
-    @GetMapping("/helloview")
-    public String hello(Model model){
-        model.addAttribute("hello", "HelloWolrd");
-        return "hello";
-    }
+//    @GetMapping("/helloview")
+//    public String hello(Model model){
+//        model.addAttribute("hello", "HelloWolrd");
+//        return "linux/ubuntuCommand";
+//    }
 
 
-    @RequestMapping(value="/do-stuff")
-    public String doStuffMethod() {
-        System.out.println("Success");
-        return "hello";
-    }
 
 
 
