@@ -79,7 +79,7 @@ public class JavaRestServiceImpl implements JavaRestService {
         }
 
         // 드라이버 경로
-        final File driverFile = new File("C:\\Users\\dongwha\\Downloads\\chromedriver_win32\\chromedriver.exe");
+        final File driverFile = new File("C:\\Users\\dongwha\\Downloads\\chromedriver_win32\\chromedriver_win.exe");
         final String driverFilePath = driverFile.getAbsolutePath();
 
         // 시스템 property 설정
@@ -98,7 +98,6 @@ public class JavaRestServiceImpl implements JavaRestService {
         result += "\n" + driver.getCurrentUrl();
 
         final JavascriptExecutor js = (JavascriptExecutor) driver;
-
 
 
         // time of the process of navigation and page load
