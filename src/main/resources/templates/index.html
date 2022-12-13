@@ -3,45 +3,113 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate ="layout/layout">
 <main layout:fragment="content">
-        <h1>ABOUT ME</h1>
-        <ul>
-            <li>간단한 자기소개(개발자로써)</li>
-            <li> <a href="https://github.com/oshion89/test18_hoo" target='_blank'> THIS PAGE ON GITHUB </a> </li>
-            <li>
+
+    <h3 class="font-bold"><i class="fas fa-book-open"></i> ABOUT ME</h3>
+    <p>WAS, JAVA, Spring boot, sql, redis, Cloud 에 관심이 있는 백엔드 개발자의 <br> 해본것 유용했던것을 기록하는 공간입니다.</p>
+
+    <div>
+        <h3 class="font-bold">CONTACT</h3>
+        <p>
+            <span>Email : </span>
+            <a href="mailto:oshion89@gmail.com" target='_blank'>oshion89@gmail.com</a>
+        </p>
+        <p>
+            <span>Github : </span>
+            <a href="https://github.com/oshion89/test18_hoo" target='_blank'> this page </a>
+        </p>
+    </div>
+
+
+    <div>
+        <h3 class="font-bold">SKILLS</h3>
+        <p>
+            <span>Laguage : </span>
+            <ul>
+                <li>JAVA</li>
+                <li>C</li>
+            </ul>
+        </p>
+        <p>
+            <span>RDMS : </span>
+            <ul>
+                <li>MYSQL</li>
+                <li>MSSQL</li>
+                <li>MARIA</li>
+                <li>ORACLE</li>
+            </ul>
+        </p>
+        <p>
+            <span>Framework : </span>
+            <ul>
+                <li>SPRING BOOT</li>
                 <ul>
-                    <li>프로젝트 설명</li>
-                    <li> <a href="https://greendongwha.com" target='_blank'> 동화자연마루 </a> </li>
-                    <li> <a href="https://m-park.co.kr" target='_blank'> 엠파크 </a> </li>
-                    <li>사용한 기술 스택 언어, 프레임워크를 Frontend, Backend 나눠서 보기 좋게 정리합니다.</li>
-                    <li>기능 설명 프로젝트 주요 기능을 개발 용어를 최대한 사용하여 정리합니다.</li>
-                    <li>담당역할 및 성과 나의 포지션과 어떤 기능을 어떻게 구현했는지 간단히 작성합니다.</li>
+                    <li>redis</li>
+                    <li>mybatis</li>
+                    <li>quartz</li>
+                    <li>security</li>
+                    <li>jwt</li>
+                    <li>lombok</li>
                 </ul>
-            </li>
-            <li>주요 프로젝트</li>
-            <li>학력 / 이력</li>
+            </ul>
+        </p>
+        <p>
+            <span>WAS : </span>
+            <ul>
+                <li>Tomcat</li>
+                <li>ShellScript</li>
+            </ul>
+        </p>
+        <p>
+            <span>AWS : </span>
+        <ul>
+            <li>EC2</li>
+            <li>RDS</li>
+            <li>S3</li>
+            <li>ElasticCache</li>
         </ul>
+        </p>
+    </div>
+
+    <div>
+        <h3 class="font-bold">CAREER</h3>
+        <p>
+            <h5>동화기업</h5>
+            <p><a href="https://greendongwha.com" target='_blank'> 동화자연마루 </a></p>
+
+            <a class="nav collapsed" href="#" data-toggle="collapse" data-target="#contentLayout1">
+               기술스택
+               <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="contentLayout1">
+                    <p>tttttttttttttteeeeeeeeeeeeeeeesssssssssssscccccccccc</p>
+            </div>
 
 
-    <!--
-     JAVA 11
-    Tomcat 8.5
-    Spring boot 2.5.3
-    lombok
-    mybatis 2.2.0
-    mysql
-    aws-mysql-jdbc 1.0.0
-    validation
-    json-simple
-    //S3
-    spring-cloud-starter-aws 2.0.1
-    quartz
-    mssql-jdbc 6.1.0
-    spring-boot-starter-data-redis
-    google-analytics-data:0.11.9
-    spring-boot-starter-security
-    jjwt-api 0.11.2
+            <p><a href="https://www.m-park.co.kr" target='_blank'> 엠파크 </a></p>
 
-     -->
+            <a class="nav collapsed" href="#" data-toggle="collapse" data-target="#contentLayout2">
+                기술스택
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="contentLayout2">
+                <p>tttttttttttttteeeeeeeeeeeeeeeesssssssssssscccccccccc</p>
+            </div>
+
+        </p>
+        <p>
+            <h5>삼표</h5>
+        </p>
+        <p>
+            <h5>참엔지니어링</h5>
+        </p>
+        <p>
+            <h5>코니퍼</h5>
+        </p>
+    </div>
+
+
+
+
 
 </main>
 </html>
