@@ -5,21 +5,46 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
 
-                <div class="sb-sidenav-menu-heading">A</div>
                 <a class="nav-link" th:href="@{/}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Home
                 </a>
 
-                <div class="sb-sidenav-menu-heading">LINUX</div>
-                <a class="nav-link" th:href="@{/linux/ubuntucommand}">우분투 많이쓰는 명령어</a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#linuxLayouts">
+                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    LINUX
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="linuxLayouts">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" th:href="@{/linux/ubuntucommand}">우분투 많이쓰는 명령어</a>
+                    </nav>
+                </div>
 
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#javaLayouts">
+                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    JAVA
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="javaLayouts" >
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" th:href="@{/java/endecryption}">암복호화</a>
+                        <a class="nav-link" th:href="@{/java/gettoken}">JWT토큰발행</a>
+                        <a class="nav-link" th:href="@{/java/loadingspeed}">사이트속도측정</a>
+                        <a class="nav-link" th:href="@{/java/showwebhtml}">사이트HTML보기</a>
+                    </nav>
+                </div>
 
-                <div class="sb-sidenav-menu-heading">JAVA</div>
-                <a class="nav-link" th:href="@{/java/endecryption}">암복호화</a>
-                <a class="nav-link" th:href="@{/java/gettoken}">JWT토큰발행</a>
-                <a class="nav-link" th:href="@{/java/loadingspeed}">사이트속도측정</a>
-                <a class="nav-link" th:href="@{/java/showwebhtml}">사이트HTML보기</a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#mysqlLayouts">
+                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    MYSQL
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="mysqlLayouts" >
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" th:href="@{/java/endecryption}">DATETIME변환</a>
+                    </nav>
+                </div>
 
 
 <!--                <div class="sb-sidenav-menu-heading">B</div>-->
